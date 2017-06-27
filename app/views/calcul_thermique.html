@@ -1,0 +1,116 @@
+<form name="echangeur_thermique" ng-submit="submit()" enctype="multipart/form-data" method="POST">
+
+  <!--import un fichier csv-->
+  <div class="row">
+    <div class=" col-sm-offset-1 col-sm-5">
+      <div class="form-group">
+        <input type="file" class="btn btn-primary" fileread="temperature" name="temperature" id="fileUpload" />
+      </div>
+      <div class="form-group">
+        <input type="button" class="btn btn-primary" id="upload" value="Upload" />
+      </div>
+      <br>
+      <div id="dvCSV">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="submit" value="submit">Envoyer</button>
+
+
+        <scatter data="data" selected-point="selectEmployer"> </scatter>
+
+
+
+      </div>
+    </div>
+
+    <div id="formeffluent " class="col-sm-offset-1 col-sm-5">
+      <div class="col-sm-12">
+        <div class="form-group">
+
+          <label for="qeffluent1">Q effluent en m3/s</label>
+
+          <div class="col-sm-10"> <input type="text" class="form-control " id="qeffluent1" ng-model="qeffluent1">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="form-group">
+
+          <label for="qeffluent2">Conversion du Q effluent en W/K</label>
+
+          <div class="col-sm-10">
+            <input type="text" class="form-control col-sm-3 " id="qeffluent2" name="qeffluent2" value="{{qeffluent2() }}">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="rheffluent">Rayon hydraulique effluent</label>
+        <input type="text" class="form-control" id="rheffluent" name="rheffluent" ng-model="rheffluent" >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="smouilleeffluent">section mouillée effluent</label>
+        <input type="text" class="form-control" id="smouilleeffluent" name="smouilleeffluent" ng-model="smouilleeffluent">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="reynoldseffluent">Reynolds effluent</label>
+        <input type="text" class="form-control" id="reynoldseffluent" name="reynoldseffluent" value="{{reynoldseffluent()}}">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="prandlteffluent">Prandlt effluent</label>
+        <input type="text" class="form-control" id="prandlteffluent" name="prandlteffluent" value="{{prandlteffluent()}}">
+      </div>
+    </div>
+  </div>
+</form>
+
+<form ng-submit="solver()" enctype="multipart/form-data" method="POST">
+  <div class="row">
+
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="vitesse1">Limite vitesse des calories inférieures </label>
+        <input type="text" class="form-control" id="vitesse1" ng-model="vitesse1" name="vitesse1"    >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="vitesse2">Limite vitesse des calories supérieures </label>
+        <input type="text" class="form-control" id="vitesse2"    name="vitesse2" >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-5">
+      <div class="form-group">
+        <label for="qcaloporteur1">Limite du fluide caloporteur</label>
+        <input type="text" class="form-control" id="qcaloporteur1" ng-model="qcaloporteur1"  name="qcaloporteur1">
+      </div>
+      <div class="form-group">
+        <button  type="submit" class="btn btn-primary" id="limite" value="limite" class="btn btn-primary">limite</button>
+      </div>
+    </div>
+  </div>
+</form>

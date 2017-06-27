@@ -1,0 +1,26 @@
+{
+  "name": "echangeur_thermique",
+  "description": "This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular) version 0.16.0.",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Vivien Maillard <vivien.maillard@icloud.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "^1.4.0",
+    "angular-resource": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "bootstrap": "^3.2.0",
+    "bootstrap-css": "^3.3.7",
+    "cors": "*"
+
+  }
+}
